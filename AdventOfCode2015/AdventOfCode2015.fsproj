@@ -59,6 +59,7 @@
     <None Include="Day 6\Prob2.fsx" />
     <None Include="Day 7\Prob2b.fsx" />
     <None Include="Day 7\Prob2.fsx" />
+    <None Include="Day 8\Prob2.fsx" />
     <None Include="Day5\Prob2.fsx" />
     <Content Include="Day5\input.txt" />
     <None Include="Day5\Prob1.fsx" />
@@ -66,6 +67,10 @@
     <None Include="Day 6\Prob1.fsx" />
     <Content Include="Day 7\input.txt" />
     <None Include="Day 7\Prob1.fsx" />
+    <Content Include="Day 8\input.txt" />
+    <None Include="Day 8\Prob1.fsx" />
+    <Content Include="Day 9\input.txt" />
+    <None Include="Day 9\Prob1.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="mscorlib" />

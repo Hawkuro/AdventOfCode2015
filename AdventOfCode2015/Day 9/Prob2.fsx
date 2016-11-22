@@ -31,4 +31,4 @@ let calculateTotalDistance (dists : Map<Set<string>,int>) (perm : string seq) =
     |> Seq.map (fun s -> dists.[s]) |> Seq.sum
     
 
-locations |> getPermutations |> Seq.map (calculateTotalDistance distanceMap) |> Seq.min |> printfn "%A"
+locations |> getPermutations |> Seq.map (calculateTotalDistance distanceMap) |> Seq.max |> printfn "%A"

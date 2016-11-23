@@ -1,4 +1,4 @@
-﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day5\input.txt") |> Seq.toList;
+﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day5\D5input.txt") |> Seq.toList;
 let toString : char seq -> string = Seq.map string >> String.concat ""
 
 

@@ -56,27 +56,37 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="Tutorial.fsx" />
-    <None Include="Day 10\Prob2.fsx" />
-    <None Include="Day 10\Prob1.fsx" />
+    <None Include="Day 5\D5Prob2.fsx" />
+    <None Include="Day 5\D5Prob1.fsx" />
+    <Content Include="Day 5\D5input.txt" />
+    <None Include="Day 6\D6Prob2.fsx" />
+    <None Include="Day 6\D6Prob1.fsx" />
+    <Content Include="Day 6\D6input.txt" />
+    <None Include="Day 7\D7Prob2.fsx" />
+    <None Include="Day 7\D7Prob2b.fsx" />
+    <None Include="Day 7\D7Prob1.fsx" />
+    <Content Include="Day 7\D7input.txt" />
+    <None Include="Day 8\D8Prob2.fsx" />
+    <None Include="Day 8\D8Prob1.fsx" />
+    <Content Include="Day 8\D8input.txt" />
+    <None Include="Day 9\D9Prob2.fsx" />
+    <None Include="Day 9\D9Prob1.fsx" />
+    <Content Include="Day 9\D9input.txt" />
+    <None Include="Day 10\D10Prob2.fsx" />
+    <None Include="Day 10\D10Prob1.fsx" />
     <Content Include="Day 10\atoms.txt" />
-    <None Include="Day 6\Prob2.fsx" />
-    <None Include="Day 7\Prob2b.fsx" />
-    <None Include="Day 7\Prob2.fsx" />
-    <None Include="Day 8\Prob2.fsx" />
-    <None Include="Day 9\Prob2.fsx" />
-    <None Include="Day5\Prob2.fsx" />
-    <Content Include="Day5\input.txt" />
-    <None Include="Day5\Prob1.fsx" />
-    <Content Include="Day 6\input.txt" />
-    <None Include="Day 6\Prob1.fsx" />
-    <Content Include="Day 7\input.txt" />
-    <None Include="Day 7\Prob1.fsx" />
-    <Content Include="Day 8\input.txt" />
-    <None Include="Day 8\Prob1.fsx" />
-    <Content Include="Day 9\input.txt" />
-    <None Include="Day 9\Prob1.fsx" />
+    <None Include="Day 11\D11Prob2.fsx" />
+    <None Include="Day 11\D11Prob1.fsx" />
+    <None Include="Day 12\D12Prob2.fsx" />
+    <Content Include="Day 12\D12input.txt" />
+    <None Include="Day 12\D12Prob1.fsx" />
+    <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FSharp.Data">
+      <HintPath>..\packages\FSharp.Data.2.3.2\lib\net40\FSharp.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="mscorlib" />
     <Reference Include="FSharp.Core, Version=$(TargetFSharpCoreVersion), Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
       <Private>True</Private>
@@ -86,6 +96,7 @@
     <Reference Include="System.Numerics" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -1,4 +1,4 @@
-﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 9\input.txt");
+﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 9\D8input.txt");
 
 let (|EmptySet|_|) set = if Set.isEmpty set then Some EmptySet else None
 

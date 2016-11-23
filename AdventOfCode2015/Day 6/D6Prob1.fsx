@@ -1,4 +1,4 @@
-﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 6\input.txt");
+﻿let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 6\D6input.txt");
 
 let mutable baseGrid = List.toArray [for i in 0..999 -> List.toArray [for i in 0..999 -> ref false]]
 

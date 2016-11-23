@@ -1,6 +1,6 @@
 ﻿open System.Collections.Generic
 
-let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 7\input.txt");
+let input = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 7\D7input.txt");
 
 
 
@@ -11,9 +11,6 @@ let (|Integer|_|) (str: string) =
 
 let readInputString (str :string) = 
     match (str.Split ' ') with
-    | [|_;_;_;"->";"b"|]
-    | [|_;_;"->";"b"|]
-    | [|_;"->";"b"|] -> ("b",((fun x y -> x),["a"]))
     | [|a;"AND";b;"->";outp|] -> (outp,((&&&),[a;b]))
     | [|a;"OR";b;"->";outp|] -> (outp,((|||),[a;b]))
     | [|a;"RSHIFT";b;"->";outp|] -> (outp,( (fun x y -> x >>> int32 y) ,[a;b]))
@@ -24,14 +21,15 @@ let readInputString (str :string) =
 
 
 let opMap = input |> Seq.map readInputString |> Map.ofSeq
+let mutable Values = new Dictionary<string,uint16>()
 
-let rec calculate (values : IDictionary<string,uint16>) (opeMap : Map<string,((uint16 -> uint16 -> uint16)*string list)>) getValue actuallyCalc = 
+let rec calculate (values : IDictionary<string,uint16>) (opeMap : Map<string,((uint16 -> uint16 -> uint16)*string list)>) getValue = 
     let rec calculate' values (opeMap : Map<string,((uint16 -> uint16 -> uint16)*string list)>) getValue = 
-//        printfn "%s" getValue
+        printfn "%s" getValue
         let (|Literal|_|) str = 
             match str with
             | Integer i -> Some i
-            | s -> Some (calculate values opeMap s false)
+            | s -> Some (calculate values opeMap s)
             | _ -> failwith ("Parse error: "+str)
         let command = opeMap.[getValue]
         let ans =
@@ -39,11 +37,9 @@ let rec calculate (values : IDictionary<string,uint16>) (opeMap : Map<string,((u
             | (comm,[Literal a;Literal b]) -> comm a b
             | (comm,[Literal a]) -> comm a a
             | _ -> failwith ("Failed to execute command for "+getValue)
-        if not (values.ContainsKey getValue)
-        then values.Add (getValue,ans)
-        else printfn "%s" (getValue+" = "+ans.ToString()+" or "+values.[getValue].ToString())
+        values.Add (getValue,ans)
+        printfn "%s" (getValue+" = "+ans.ToString())
         ans
-    if not actuallyCalc && values.ContainsKey getValue then values.[getValue] else calculate' values opeMap getValue
+    if values.ContainsKey getValue then values.[getValue] else calculate' values opeMap getValue
 
-
-[for i in 0..65535 -> (uint16 i,calculate (System.Linq.Enumerable.ToDictionary([("a",uint16 i)], fst, snd)) opMap "a" true)] |> Seq.find (fun a -> (fst a) = (snd a)) |> printfn "%A"
+calculate (Values) opMap "a" |> printfn "%A"

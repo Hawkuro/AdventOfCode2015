@@ -1,7 +1,8 @@
-﻿#r @"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\packages\FSharp.Data.2.3.2\lib\net40\FSharp.Data.dll"
+﻿// Note: the following requires FSharp.Data be installed and needs to be changed to reflect actual directory
+#r @"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\packages\FSharp.Data.2.3.2\lib\net40\FSharp.Data.dll"
 open FSharp.Data
 
-let data = JsonValue.Load(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 12\D12input.txt")
+let data = JsonValue.Load(__SOURCE_DIRECTORY__+ @"\D12input.txt")
 
 let rec getJSONTotal json = 
     match json with 

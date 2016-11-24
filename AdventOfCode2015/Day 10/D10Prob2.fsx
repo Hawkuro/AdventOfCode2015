@@ -1,5 +1,5 @@
 ﻿let input = "3113322113" // = Bi
-let atoms = System.IO.File.ReadAllLines(@"C:\Users\hawku\Documents\Visual Studio 2015\Projects\AdventOfCode2015\AdventOfCode2015\Day 10\atoms.txt");
+let atoms = System.IO.File.ReadAllLines(__SOURCE_DIRECTORY__+ @"\atoms.txt");
 let iterations = 50
 
 type atomInfo = {content : string; evolution : string list}

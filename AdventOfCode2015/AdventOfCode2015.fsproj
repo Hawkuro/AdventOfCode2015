@@ -57,8 +57,9 @@
   <ItemGroup>
     <Compile Include="Tutorial.fsx" />
     <None Include="Day 2\D2Prob2.fsx" />
-    <None Include="Day 3\D3Prob2.fsx" />
+    <None Include="Day 3\D3Prob1.fsx" />
     <Content Include="Day 3\D3input.txt" />
+    <None Include="Day 3\D3Prob2.fsx" />
     <None Include="Day 4\Day4Prob1.fsx" />
     <None Include="Day 4\Day4Prob2.fsx" />
     <None Include="Day 5\D5Prob2.fsx" />

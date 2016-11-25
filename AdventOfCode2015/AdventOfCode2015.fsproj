@@ -56,6 +56,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="Tutorial.fsx" />
+    <None Include="Day 2\D2Prob2.fsx" />
     <None Include="Day 3\D3Prob2.fsx" />
     <Content Include="Day 3\D3input.txt" />
     <None Include="Day 4\Day4Prob1.fsx" />
@@ -87,6 +88,11 @@
     <Content Include="Day 13\D13input.txt" />
     <None Include="Day 13\D13Prob1.fsx" />
     <Content Include="packages.config" />
+    <Content Include="Day 1\D1input.txt" />
+    <None Include="Day 1\D1Prob1.fsx" />
+    <None Include="Day 1\D1Prob2.fsx" />
+    <Content Include="Day 2\D2input.txt" />
+    <None Include="Day 2\D2Prob1.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">

@@ -56,6 +56,7 @@
   <Import Project="$(FSharpTargetsPath)" />
   <ItemGroup>
     <Compile Include="Tutorial.fsx" />
+    <None Include="Day 14\D14Prob2.fsx" />
     <None Include="Day 1\D1Prob1.fsx" />
     <None Include="Day 1\D1Prob2.fsx" />
     <Content Include="Day 1\D1input.txt" />

@@ -16,7 +16,7 @@ let parseMolecule (str : string) =
         | [] -> out
         | UpperCase a::LowerCase b::tail -> parseMolecule' tail ((new string [|a;b|])::out)
         | UpperCase a::tail -> parseMolecule' tail ((new string [|a|])::out)
-        | LowerCase a::tail -> parseMolecule' tail ((new string [|a|])::out)
+        | 'e'::tail -> parseMolecule' tail ("e"::out)
         | _ -> failwith ("could not parse molecule: "+str)
     parseMolecule' (Seq.toList str) [] |> List.rev
 

@@ -113,6 +113,7 @@
     <None Include="Day 19\D19Prob2.fsx" />
     <Content Include="Day 19\D19input.txt" />
     <Content Include="packages.config" />
+    <None Include="Day 20\D20Prob1.fsx" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data">
